@@ -2,12 +2,13 @@
 // import ProductItem from "./components/product-item";
 
 import ProductItem from "./components/product-item";
+import "./style.css";
 
 function ProductList(props) {
   const { name, city, listOfProducts } = props;
   return (
     <div>
-      <h3>E-Commerce Project</h3>
+      <h3 className="title">E-Commerce Project</h3>
       {/* <ProductItem /> */}
       <h4>
         Name is {name}, he/she belongs to the city {city}
