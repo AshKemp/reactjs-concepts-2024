@@ -6,7 +6,10 @@ function ButtonComponent() {
 
 function ProductItem({ product, key }) {
   return (
-    <div key={key}>
+    <div
+      style={{ padding: "20px", border: "2px solid red", marginBottom: "12px" }}
+      key={key}
+    >
       <p className={styles.productTitle}>{product}</p>
       <ButtonComponent />
     </div>
