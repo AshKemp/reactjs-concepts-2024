@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 // import ProductItem from "./components/product-item";
 
+import ProductItem from "./components/product-item";
+
 function ProductList(props) {
   const { name, city, listOfProducts } = props;
   return (
@@ -12,7 +14,7 @@ function ProductList(props) {
       </h4>
       <ul>
         {listOfProducts.map((product, index) => (
-          <li key={index}>{product}</li>
+          <ProductItem product={product} key={index} />
         ))}
       </ul>
     </div>

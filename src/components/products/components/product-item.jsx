@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 function ButtonComponent() {
   return <button>Click</button>;
 }
 
-function ProductItem() {
+function ProductItem({ product, key }) {
   return (
-    <div>
-      <p>Product 1</p>
+    <div key={key}>
+      <p>{product}</p>
       <ButtonComponent />
     </div>
   );
