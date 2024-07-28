@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Users() {
   const [usersList, setUsersList] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   async function fetchAllUsers() {
     try {
       const apiResponse = await fetch("https://dummyjson.com/users");
@@ -19,9 +19,13 @@ export default function Users() {
       console.log(error);
     }
   }
-  useEffect(() => {
-    fetchAllUsers();
-  }, []);
+  //   useEffect(() => {
+  //     fetchAllUsers();
+  //   }, []);
+
+  //   function handleFetchAllUsers() {
+  //     fetchAllUsers();
+  //   }
 
   if (loading) {
     return <h1>Fetching users... Please wait!</h1>;
@@ -29,6 +33,7 @@ export default function Users() {
   return (
     <div>
       <h1>All Users List</h1>
+      <button onClick={fetchAllUsers}>Fetch all users</button>
       <ul>
         {usersList && usersList.length > 0 ? (
           usersList.map((user) => (
