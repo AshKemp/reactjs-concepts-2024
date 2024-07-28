@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 // import ProductItem from "./components/product-item";
 
+import { useState } from "react";
 import ProductItem from "./components/product-item";
 import "./style.css";
 
 function ProductList(props) {
   const { name, city, listOfProducts } = props;
-  const flag = true;
+  const [flag, setFlag] = useState(false);
   //   function renderTextBlock(flag) {
   //     return flag ? (
   //       <h4>
@@ -16,6 +17,10 @@ function ProductList(props) {
   //       <h4> Hello World</h4>
   //     );
   //   }
+
+  const handleToggleText = () => {
+    setFlag(!flag);
+  };
 
   const renderTextBlock = flag ? (
     <h4>
@@ -29,6 +34,7 @@ function ProductList(props) {
     <div>
       <h3 className="title">E-Commerce Project</h3>
       {/* <ProductItem /> */}
+      <button onClick={handleToggleText}>Toggle text</button>
       {renderTextBlock}
       <ul>
         {listOfProducts.map((product, index) => (
