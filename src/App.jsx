@@ -1,7 +1,8 @@
 import "./App.css";
+import FormComponent from "./components/form";
 // import ContextButtonComponent from "./components/context-concept/button";
 // import ContextTextComponent from "./components/context-concept/text";
-import UseReducerExample from "./components/use-reducer-example";
+// import UseReducerExample from "./components/use-reducer-example";
 // import Users from "./components/users";
 // import ClassBasedComponent from "./components/class-based-component";
 // import FunctionalComponent from "./components/functional-component";
@@ -24,7 +25,8 @@ function App() {
       {/* <Users /> */}
       {/* <ContextButtonComponent />
       <ContextTextComponent /> */}
-      <UseReducerExample />
+      {/* <UseReducerExample /> */}
+      <FormComponent />
     </>
   );
 }
