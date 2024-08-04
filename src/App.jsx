@@ -1,5 +1,7 @@
 import "./App.css";
-import FormComponent from "./components/form";
+// import FormComponent from "./components/form";
+import LoginComponent from "./components/login";
+import RegisterComponent from "./components/register";
 // import ContextButtonComponent from "./components/context-concept/button";
 // import ContextTextComponent from "./components/context-concept/text";
 // import UseReducerExample from "./components/use-reducer-example";
@@ -26,7 +28,11 @@ function App() {
       {/* <ContextButtonComponent />
       <ContextTextComponent /> */}
       {/* <UseReducerExample /> */}
-      <FormComponent />
+      {/* <FormComponent /> */}
+      <div style={{ display: "flex", gap: "10px" }}>
+        <LoginComponent />
+        <RegisterComponent />
+      </div>
     </>
   );
 }
